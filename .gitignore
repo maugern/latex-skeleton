@@ -1,0 +1,28 @@
+## Nicolas Mauger, 29 Mar. 2016
+
+# logs
+*~
+*.rtf
+*.ps
+*.log
+*.aux
+*.out
+*.css
+*.bak
+*.toc
+*.pl
+*.4ct
+*.4tc
+*.lg
+*.sxw
+*.tmp
+*.xref
+*.idv
+*.tns
+*.nav
+*.snm
+
+# out
+*.pdf
+*.dvi
+*.html

@@ -1,0 +1,68 @@
+% Exemple of picture insertion
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=90mm]{res/lena.png}
+	\caption{Legend \label{while be in table of content}}
+\end{figure}
+
+% Exemple of list/enumerate
+\begin{enumerate}
+    \item Poissons
+    \item Mamifères
+        \begin{itemize} % Itemize for listing
+            \item Cétacés;
+            \item Primates;
+            \begin{enumerate} % Enumerate for numerotation
+                \item Homme
+                \item Gorille
+            \end{enumerate}
+            \item Rongeurs;
+        \end{itemize}
+    \item Reptiles.
+\end{enumerate}
+
+% Exemple of table
+\begin{tabular}{|l||l|l||l|l|}
+    \hline&\multicolumn{2}{l|}{Singular}&\multicolumn{2}{l|}{Plural}\\
+    \cline{2-5}English&\textbf{Gaeilge}&English&\textbf{Gaeilge}\\
+    \hline\hline
+        1st Person&at me&\textbf{agam}&at us&\textbf{againn}\\
+        2nd Person&at you&\textbf{agat}&at you&\textbf{agaibh}\\
+        3rd Person&at him&\textbf{aige}&at them&\textbf{acu}\\
+        &at her&\textbf{aici}& & \\
+    \hline
+\end{tabular}
+
+
+% Tikz algorithme exemple
+
+\begin{tikzpicture}[
+  man/.style={rectangle,draw,fill=blue!20},
+  woman/.style={rectangle,draw,fill=red!20,rounded corners=.8ex},
+  grandchild/.style={grow=down,xshift=1em,anchor=west,
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}},
+  first/.style={level distance=6ex},
+  second/.style={level distance=12ex},
+  third/.style={level distance=18ex},
+  level 1/.style={sibling distance=5em}]
+    % Parents
+    \coordinate
+      child[grow=left] {node[man,anchor=east]{Jim}}
+      child[grow=right] {node[woman,anchor=west]{Jane}}
+      child[grow=down,level distance=0ex]
+    [edge from parent fork down]
+    % Children and grandchildren
+    child{node[man] {Alfred}
+      child[grandchild,first] {node[man]{Joe}}
+      child[grandchild,second] {node[woman]{Heather}}
+      child[grandchild,third] {node[woman] {Barbara}}}
+    child{node[woman] {Berta}
+      child[grandchild,first] {node[man]{Howard}}}
+    child {node[man] {Charles}}
+    child {node[woman]{Doris}
+      child[grandchild,first] {node[man]{Nick}}
+      child[grandchild,second] {node[woman]{Liz}}};
+\end{tikzpicture}
+
+% More & better exemple of latex/tikzpicture
+\href{http://www.texample.net}{texample.net}
