@@ -7,24 +7,25 @@
 \input{includes}
 
 \title{}
-\author{Nicolas Mauger}
+\author{}
 \date{\today}
-\geometry{hmargin=2cm, vmargin=1.4cm}
 
 \begin{document}
     \begin{titlepage}
-        \clearpage\maketitle % removing page number for titlepage
+        \pagenumbering{gobble} % removing page number for titlepage
+        \maketitle
         \thispagestyle{empty}
     \end{titlepage}
-    \newpage
+    \pagenumbering{arabic} % page numbering this arabic character
+    \setcounter{page}{2}
     \tableofcontents
     \newpage
-
     \begin{abstract}
-        ...
+   
     \end{abstract}
-    \section{Section}
-        \subsection{Subsection}
+    \part{}
+        \section{}
+            \subsection{}
                 \input{exemple}
-    \
+    
 \end{document}
