@@ -6,3 +6,9 @@ before_install:
 - sudo apt-get install -qq texlive-latex-base
 - sudo apt-get install -qq -y texlive texlive-lang-french  texlive-latex-recommended  texlive-latex-extra
 script: make
+deploy:
+  provider: releases
+  file: main.pdf
+  skip_cleanup: true
+  on:
+    tags: true
