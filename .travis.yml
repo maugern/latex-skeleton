@@ -6,8 +6,9 @@ before_install:
 - sudo apt-get install -qq texlive-latex-base
 - sudo apt-get install -qq -y texlive texlive-lang-french  texlive-latex-recommended  texlive-latex-extra
 script:
-- travis encrypt <key> --add deploy.api-key
 - make
+after_success:
+- coveralls
 deploy:
   provider: releases
   file: main.pdf
