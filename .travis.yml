@@ -5,8 +5,5 @@ before_install:
 - sudo apt-get update -qq
 - sudo apt-get install -qq texlive-latex-base
 - sudo apt-get install -qq -y texlive texlive-lang-french  texlive-latex-recommended  texlive-latex-extra
-- pip install --user cpp-coveralls
 script:
-- ./configure --enable-gcov && make
-after_success:
-- coveralls
+- make

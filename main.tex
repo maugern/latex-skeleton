@@ -1,31 +1,34 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ==========================
 % Nicolas Mauger
 % 29 Mar. 2016
-% includes.tex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% main.tex
+% ==========================
 
 \input{includes}
 
-\title{}
-\author{}
+\title{Title}
+\author{Nicolas Mauger\thanks{The helper}}
 \date{\today}
 
 \begin{document}
-    \begin{titlepage}
-        \pagenumbering{gobble} % removing page number for titlepage
-        \maketitle
-        \thispagestyle{empty}
-    \end{titlepage}
-    \pagenumbering{arabic} % page numbering this arabic character
-    \setcounter{page}{2}
-    \tableofcontents
+    \maketitle
+
+    % Empty page
     \newpage
+    ~
+    \thispagestyle{empty}
+    \newpage
+    \pagenumbering{arabic} % pages en caractère arabe
+    \setcounter{page}{3}
+
+    \tableofcontents
+
     \begin{abstract}
-   
+        Ceci est le résumé
     \end{abstract}
-    \part{}
-        \section{}
-            \subsection{}
+    \part{Part}
+        \section{Section}
+            \subsection{SubSection}
                 \input{exemple}
-    
+
 \end{document}
